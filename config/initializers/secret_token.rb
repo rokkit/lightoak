@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Lightoak::Application.config.secret_token = 'b77a194963fdc4a802bcd61b8cf736ed2c6e1b791202c50e1cd851cfdaa1f66b17d1034f3d911e7f6e0113ae65467e052e6502e7200935ed12951b1be095f60d'
+Lightoak::Application.config.secret_token = '9dacb87330e83cefe6594a35b32581cc2afcff9fa46434cebba1b124b002ff5427ae71518bb1b3187524b87a7d5d08c4c1194c2a556de00860dc9d1a18c725c4'
