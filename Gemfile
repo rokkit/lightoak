@@ -8,7 +8,7 @@ gem 'rails', '3.2.11'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails'
+  gem 'rspec-rails','2.6.1.beta1'
 end
 
 group :production do
@@ -16,13 +16,14 @@ group :production do
 end
 
 group :test do
+  gem 'rspec', '2.6'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'email_spec'
   gem 'timecop'
   gem 'launchy'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
 end
 
 # Gems used only for assets and not required
@@ -41,7 +42,7 @@ gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
 gem 'heroku'
-
+gem 'devise'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
