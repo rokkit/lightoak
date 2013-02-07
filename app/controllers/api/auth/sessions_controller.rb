@@ -1,27 +1,36 @@
 class Api::Auth::SessionsController < Devise::SessionsController
   prepend_before_filter :require_no_authentication, :only => [:create ]
   
-  before_filter :ensure_params_exist
+  # before_filter :ensure_params_exist
  
-  respond_to :json
   
   def create
-    build_resource
-    resource = User.find_for_database_authentication(:email => params[:email])
-    return invalid_login_attempt unless resource
- 
-    if resource.valid_password?(params[:password])
-      # sign_in("user", resource)
-      render :json=> {:success=>true, :auth_token=>resource.authentication_token }
-      return
+    respond_to do |format|
+      format.html { super }
+      format.json {
+        ensure_params_exist
+        build_resource
+        resource = User.find_for_database_authentication(:email => params[:email])
+        return invalid_login_attempt unless resource
+     
+        if resource.valid_password?(params[:password])
+          render :json=> {:success=>true, :auth_token=>resource.authentication_token }
+          return
+        end
+        invalid_login_attempt
+      }
     end
-    invalid_login_attempt
   end
   
   def destroy
-    # expire auth token
-    @user=User.where(:authentication_token=>params[:auth_token]).first
-    @user.reset_authentication_token!
+      respond_to do |format|
+        format.html { super }
+        format.json {
+          # expire auth token
+          @user=User.where(:authentication_token=>params[:auth_token]).first
+          @user.reset_authentication_token!
+        }
+      end
     # sign_out(resource_name)
   end
  
