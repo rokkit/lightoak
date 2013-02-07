@@ -5,8 +5,11 @@ Lightoak::Application.routes.draw do
 
   devise_for :users
 
-  scope :api do
-    resources :tokens,:only => [:create, :destroy]
+
+  namespace :api do   
+    namespace :auth do
+      devise_for :users
+    end
   end
 
 

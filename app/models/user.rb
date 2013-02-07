@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   #:password_confirmation, 
   
   # attr_accessible :title, :body
+  before_save :ensure_authentication_token
+  
 end
