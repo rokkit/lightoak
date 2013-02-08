@@ -137,7 +137,7 @@ body {
 	height: 46px;
 }
 .place {
-	padding: 0 0 0 84px;
+	padding: 0 0 0 28px; 
 }
 
 .menu_profile {
@@ -466,12 +466,10 @@ padding: 7px 0 0 0;
 
 .notifications_button:hover {
 	background: #4F960D;
-	cursor: pointer;
 }
 
 .notifications_button:hover .notifications_bar{
     display: block;
-    cursor: default;
 }
 
 .notifications_button .notifications_bar{
