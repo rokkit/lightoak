@@ -202,53 +202,7 @@ body {
 	width: 200px;
 }
 
-.tree {
-	height: 308px;
-	overflow: scroll; 
-	width: 960px;
-	/*background: #59A80F;*/
-	background: #4F960D;
-	margin: 4px auto;
-	border-bottom: 4px solid #4F960D;
-	font-family: 'Casper_B', regular;
-}
 
-.table_tree {
-	width: 100%;
-	border-spacing: 0;
-	font-weight: 400;
-}
-.table_tree td{
-	height: 60px;
-	font-size: 25px;
-}
-
-.table_tree tbody td {
-	border-bottom: 1px solid #daf9bd;
-	padding: 0 0 0 20px;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.table_tree tbody td:hover{
-	cursor: pointer;
-}
-
-.table_tree tfoot td {
-	font-size: 14px;
-	text-align: center;
-}
-
-.tree_view{
-	margin: 0 15px 15px 15px;
-	text-align: justify;
-	/*line-height: 20px;*/
-}
-
-.predmet{
-	/*white-space: nowrap;*/
-	color: white;
-	text-decoration: none;
-}
 
 
 .content{
