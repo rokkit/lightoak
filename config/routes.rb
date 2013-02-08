@@ -3,11 +3,14 @@ Lightoak::Application.routes.draw do
 
   get "pages/main"
 
-  devise_for :users
+  devise_for :users, controllers: { sessions: "api/auth/sessions", registrations: "api/auth/registrations"}
 
-  scope :api do
-    resources :tokens,:only => [:create, :destroy]
-  end
+
+  # namespace :api do   
+  #   namespace :auth do
+  #     devise_for :users
+  #   end
+  # end
 
 
   # The priority is based upon order of creation:
