@@ -24,7 +24,6 @@ group :test do
   gem 'timecop'
   gem 'launchy'
   gem 'cucumber-rails', :require => false
-  gem 'spork'
 end
 
 # Gems used only for assets and not required
