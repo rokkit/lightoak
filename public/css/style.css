@@ -32,12 +32,8 @@ body {
 	background-image: url("../img/gray_jean.png");
 }
 
-.logo{
+.white_bg{
 	position: relative;
-	margin: 100px auto 0 auto;
-	width: 960px;
-	height: 500px;
-	font-family: 'Casper_B';
 	border-spacing: 0;
 	padding: 20px;
 	border-radius: 5px;
@@ -49,6 +45,147 @@ body {
        -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
+.main_line {
+	width: 960px;
+	margin: 150px auto;
+	position: relative;
+}
+
+
+
+.loginform{
+	width: 274px;
+	margin: 0px 141px 0px 505px;
+}
+.regform {
+	width: 274px;
+	margin: 0px 25px 0px 141px;
+	position: absolute;
+	top: 0;
+}
+
+.regform .video {
+	background: rgba(0,0,0,0.1);
+	height: 194px;
+	margin: 0 0 20px 0px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.regform .video img{
+	position: relative;
+	top: 55px;
+}
+
+.loginform input[type=text],
+.loginform input[type=password]{
+	width: 250px;
+	padding: 10px;
+	font-family: 'Casper_It';
+	font-size: 17px;
+	outline: none;
+	border: 1px solid lightgray;
+}
+
+.loginform input[type=text]{
+	border-radius: 5px 5px 0 0;
+	border-bottom: 1px solid lightgray;
+	margin: 0;
+}
+.loginform input[type=password]{
+	border-radius: 0 0 5px 5px;
+	border-top: none;
+	margin: 0;
+}
+
+
+.regform input[type=submit],
+.loginform input[type=submit] {
+	width: 274px;
+	padding: 10px;
+	color: white;
+	border: none;
+	font-family: 'Casper_B';
+	font-size: 17px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.loginform input[type=submit]{
+	background: #7FAF1B;
+	margin-top: 20px;
+}
+
+.companyline{
+	width: 860px;
+	padding: 0 100px 0 0;
+	margin: 0 auto;
+	position: relative;
+}
+
+.langline {
+	text-align: right;
+	position: absolute;
+	top: -2px;
+	right: 0;
+	width: 100px;
+}
+
+.langline img{
+	position: relative;
+	top: 2px;
+}
+
+.rem_for{
+	position: relative;
+	margin: 10px 0 0 0;
+	font-family: 'Casper_R';
+	color: black;
+}
+.rem_for input{
+	 position: relative;
+	 top: -1px;
+}
+
+.forgot {
+	position: absolute;
+	top: 0;
+	right: 3px;
+}
+.forgot a{
+	color: lightgray;
+	text-decoration: none;
+}
+.forgot a:hover{
+	color: #000;
+}
+
+.Lightoak{
+	font-family: 'Casper_B';
+	font-size: 60px;
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+
+.companyline li{
+	list-style: none;
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.companyline li a,
+.langline{
+	text-decoration: none;
+	color: rgba(255,255,255,1);
+	font-family: 'Casper_R';
+}
+
+.regform input[type=submit] {
+	background: #CA9F56;
+}
+
 .logo img{
 	opacity: 1;
 	width: 80px;
