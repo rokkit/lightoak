@@ -21,7 +21,6 @@ describe PagesController do
   describe "with authenticate GET 'main'" do
     it "should be successful" do
       sign_in @user
-      get 'main'
       response.should be_success
     end
   end
