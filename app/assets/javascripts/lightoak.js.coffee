@@ -3,7 +3,9 @@ window.Lightoak =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: -> 
+  	new Lightoak.Routers.Posts()
+  	Backbone.history.start()
 
 $(document).ready ->
   Lightoak.initialize()

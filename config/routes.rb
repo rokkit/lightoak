@@ -1,4 +1,9 @@
 Lightoak::Application.routes.draw do
+  scope 'api' do
+    resources :posts
+  end
+
+
   get "pages/index"
 
   get "pages/main"
