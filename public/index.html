@@ -8,24 +8,69 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script>
+			$(function() {
+				$(".regform_new").hide();
+				$(".regform").children("input").click(function(){
+					$(".authform ").hide();
+					$(".regform_new").show();
+				})
+				$(".go_reg").click(function() {
+					$(".regform_new").hide();
+					$(".authform ").show();
+				})
+			})
+		</script>
 	</head>
 	<body class="wood">
 	<div class="main_line">
-		<div class="white_bg loginform">
-			<div class="Lightoak">Lightoak</div>
-			<input type="text" name="login" placeholder="Логин">
-			<input type="password" name="password" placeholder="Пароль">
-			<div class="rem_for">
-				<label><input type="checkbox"> запомнить</label>
-				<div class="forgot"><a href="#">забыли пароль?</a></div>
+		<div class="authform white_bg">
+			<div class="loginform">
+				<div class="Lightoak">Lightoak</div>
+				<input type="text" name="login" placeholder="Логин">
+				<input type="password" name="password" placeholder="Пароль">
+				<div class="rem_for">
+					<label><input type="checkbox"> запомнить</label>
+					<div class="forgot"><a href="#">забыли пароль?</a></div>
+				</div>
+				<input type="submit" value="Войти">
 			</div>
-			<input type="submit" value="Войти">
+			<div class="regform">
+				<div class="video" title="Просмотреть видео">
+					<img src="img/play_video.png" alt="">
+				</div>
+				<input type="submit" value="Регистрация">
+			</div>
 		</div>
-		<div class="white_bg regform">
-			<div class="video" title="Просмотреть видео">
-				<img src="img/play_video.png" alt="">
+		<div class="regform_new white_bg">
+			<div class="Lightoak nomagrin">Lightoak</div>
+			<div class="registr">
+					Регистрация
 			</div>
-			<input type="submit" value="Регистрация">
+			<div class="inputs">
+				<div class="addphoto" title="Добавить фотографию профиля">
+					+Фото
+				</div>
+				<input type="text" class="firtsname" placeholder="Имя">
+				<input type="text" class="lastname" placeholder="Фамилия">
+			</div>
+			<div class="inform">
+				Дата рождения:
+			</div>
+			<div class="data">
+				<input type="text" class="day" placeholder="ДД">
+				<input type="text" class="month" placeholder="Месяц">
+				<input type="text" class="year" placeholder="ГГГГ">
+			</div>
+			<input type="text" name="email" class="email" placeholder="Email">
+			<input type="password" name="password" class="password" placeholder="Пароль">
+			<div class="rem_for">
+				<label><input type="checkbox"> Я принимаю условия <a href="#">Lightoak</a></label>
+			</div>
+			<input type="submit" class="go_reg" value="Зарегистрироваться">
+			<div class="need">
+				Все поля обязательны для заполнения
+			</div>
 		</div>
 	</div>
 		<div class="companyline">
