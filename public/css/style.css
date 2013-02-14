@@ -117,7 +117,7 @@ body {
 	outline: none;
 	text-align: center;
 	padding: 10px;
-	font-family: 'Casper_It';
+	font-family: 'Casper_R';
 }
 
 .day{
@@ -162,7 +162,7 @@ body {
 	border-radius: 5px 0 0 5px;
 	text-align: center;
 	line-height: 79px;
-	font-family: 'Casper_It';
+	font-family: 'Casper_R';
 	color: #A9A9A9;
 	font-size: 17px;
 }
@@ -172,7 +172,7 @@ body {
 	width: 173px;
 	margin: 0;
 	padding: 10px;
-	font-family: 'Casper_It';
+	font-family: 'Casper_R';
 	font-size: 17px;
 	outline: none;
 }
@@ -205,7 +205,7 @@ body {
 .password{
 	width: 252px;
 	padding: 10px;
-	font-family: 'Casper_It';
+	font-family: 'Casper_R';
 	font-size: 17px;
 	outline: none;
 	border: 1px solid lightgray;
@@ -528,7 +528,7 @@ body {
 .search input{
 	font-size: 14px;
 	padding: 4px 0 4px 8px;
-	font-family: 'Casper_It', regular;
+	font-family: 'Casper_R', regular;
 	border: none;
 	width: 60px;
 	margin: 0 10px;
@@ -668,7 +668,7 @@ font-family: calibri;
 	border: none;
 	background: #CA9F56;
 	color: white;
-	font-family: 'Casper_It';
+	font-family: 'Casper_R';
 	font-size: 15px;
 	border-radius: 3px;
 	cursor: pointer;
