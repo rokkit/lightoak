@@ -96,9 +96,8 @@ body {
 
 .inform{
 	font-family: 'Casper_R';
-	text-align: left;
+	text-align: center;
 	margin: 0 0 10px 0;
-	text-indent: 18px;
 }
 
 .registr{
@@ -109,8 +108,9 @@ body {
 }
 
 .data{
-	margin: 0 0 20px 0;
+	margin: 0 auto 20px auto;
 	position: relative;
+	width: 164px;
 }
 
 .day, .month, .year {
@@ -121,23 +121,23 @@ body {
 }
 
 .day{
-	width: 28px;
+	width: 30px;
 	border: 1px solid lightgray;
 	border-radius: 5px 0 0 5px;
 	margin: 0;
 	font-size: 17px;
 	position: absolute;
 	top: 0px;
-	left: 18px;
+	left: 0px;
 }
 .month{
-	width: 100px;
+	width: 30px;
 	border: 1px solid lightgray;
 	border-left: none;
 	border-right: none;
 	margin: 0;
 	font-size: 17px;
-	margin-left: 68px;
+	margin-left: 52px;
 }
 .year{
 	width: 40px;
@@ -147,6 +147,7 @@ body {
 	font-size: 17px;
 	position: absolute;
 	top: 0px;
+	left: 102px;
 }
 
 
@@ -161,8 +162,9 @@ body {
 	border-radius: 5px 0 0 5px;
 	text-align: center;
 	line-height: 79px;
-	font-family: 'Casper_B';
-	color: gray;
+	font-family: 'Casper_It';
+	color: #A9A9A9;
+	font-size: 17px;
 }
 
 .regform_new .firtsname,
@@ -267,8 +269,57 @@ body {
 	position: absolute;
 	top: -2px;
 	right: 0;
-	width: 100px;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
 }
+
+.localemenu{
+	position: absolute;
+	top: -170px;
+	left: 0px;
+}
+
+.localemenu ul{
+	background: white;
+	width: 90px;
+	padding: 5px 0;
+	border-radius: 5px;
+}
+
+.localemenu ul:before{
+	content: " ";
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    position: absolute;
+    top: 161px;
+    left: 35px;
+}
+
+.localemenu ul li{
+	list-style: none;
+	width: 70px;
+	text-align: left;
+	padding: 5px 5px 5px 15px;
+}
+
+.localemenu ul li:hover {
+	background: #BC8554;
+}
+.localemenu ul li:hover a {
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.localemenu ul li a{
+	color: black;
+}
+
+
+
 
 .langline img{
 	position: relative;
