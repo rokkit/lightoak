@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210103409) do
+ActiveRecord::Schema.define(:version => 20130217150800) do
 
   create_table "posts", :force => true do |t|
     t.text     "content"
@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(:version => 20130210103409) do
     t.string   "authentication_token"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
+    t.string   "last"
+    t.string   "photo"
+    t.datetime "birthday"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -25,19 +25,15 @@ body {
 	margin: 0;
 }
 .wood {
-	background-image: url("../img/Melamine-wood-003.png");
+	background-image: url("../img/Melamine-wood-005.png");
 	background-position: 7px 20px;
 }
 .main_bg{
 	background-image: url("../img/gray_jean.png");
 }
 
-.logo{
+.white_bg{
 	position: relative;
-	margin: 100px auto 0 auto;
-	width: 960px;
-	height: 500px;
-	font-family: 'Casper_B';
 	border-spacing: 0;
 	padding: 20px;
 	border-radius: 5px;
@@ -49,6 +45,356 @@ body {
        -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
+.main_line {
+	width: 960px;
+	margin: 40px auto;
+	position: relative;
+}
+.authform{
+	width: 588px;
+	margin: 170px auto;
+
+}
+
+
+.loginform{
+	width: 274px;
+	margin: 0px 141px 0px 314px;
+}
+.regform {
+	width: 274px;
+	margin: 20px 25px 0px 0px;
+	position: absolute;
+	top: 0;
+}
+
+.regform_new {
+	width: 274px;
+	margin: 45px auto;
+}
+
+.regform .video {
+	background: rgba(0,0,0,0.1);
+	height: 194px;
+	margin: 0 0 20px 0px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+	padding: 0;
+}
+
+
+.regform_new .inputs{
+	height: 81px;
+	border-radius: 5px;
+	text-align: right;
+	cursor: pointer;
+	padding: 0;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.inform{
+	font-family: 'Casper_R';
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+
+.registr{
+	margin: 0 0 20px 0;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Casper_B';
+}
+
+.data{
+	margin: 0 auto 20px auto;
+	position: relative;
+	width: 164px;
+}
+
+.day, .month, .year {
+	outline: none;
+	text-align: center;
+	padding: 10px;
+	font-family: 'Casper_R';
+}
+
+.day{
+	width: 30px;
+	border: 1px solid lightgray;
+	border-radius: 5px 0 0 5px;
+	margin: 0;
+	font-size: 17px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.month{
+	width: 30px;
+	border: 1px solid lightgray;
+	border-left: none;
+	border-right: none;
+	margin: 0;
+	font-size: 17px;
+	margin-left: 52px;
+}
+.year{
+	width: 40px;
+	border: 1px solid lightgray;
+	border-radius: 0 5px 5px 0;
+	margin: 0;
+	font-size: 17px;
+	position: absolute;
+	top: 0px;
+	left: 102px;
+}
+
+
+.regform_new .addphoto {
+	width: 80px;
+	height: 79px;
+	/*background: rgba(0,0,0,0.1);*/
+	position: absolute;
+	margin: 0;
+	border: 1px solid lightgray;
+	border-right: none;
+	border-radius: 5px 0 0 5px;
+	text-align: center;
+	line-height: 79px;
+	font-family: 'Casper_R';
+	color: #A9A9A9;
+	font-size: 17px;
+}
+
+.regform_new .firtsname,
+.regform_new .lastname {
+	width: 173px;
+	margin: 0;
+	padding: 10px;
+	font-family: 'Casper_R';
+	font-size: 17px;
+	outline: none;
+}
+
+.lastname,
+.firtsname {
+	border: 1px solid lightgray;
+}
+
+.firtsname {
+	border-radius: 0 5px 0 0;
+}
+
+.lastname {
+	border-radius: 0 0 5px 0;
+}
+
+.lastname {
+	border-top: none;
+}
+
+.regform .video img{
+	position: relative;
+	top: 55px;
+}
+
+.loginform input[type=text],
+.loginform input[type=password],
+.email,
+.password{
+	width: 252px;
+	padding: 10px;
+	font-family: 'Casper_R';
+	font-size: 17px;
+	outline: none;
+	border: 1px solid lightgray;
+}
+
+.loginform input[type=text],
+.email{
+	border-radius: 5px 5px 0 0;
+	border-bottom: 1px solid lightgray;
+	margin: 0;
+}
+.loginform input[type=password],
+.password{
+	border-radius: 0 0 5px 5px;
+	border-top: none;
+	margin: 0;
+}
+
+
+.regform input[type=submit],
+.loginform input[type=submit] {
+	width: 274px;
+	padding: 10px;
+	color: white;
+	border: none;
+	font-family: 'Casper_B';
+	font-size: 17px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.regform_new input[type=submit]{
+	width: 274px;
+	padding: 10px;
+	color: white;
+	border: none;
+	font-family: 'Casper_B';
+	font-size: 17px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	border-radius: 5px;
+	background: #7FAF1B;
+	margin-top: 20px;
+}
+
+.loginform input[type=submit]{
+	background: #7FAF1B;
+	margin-top: 20px;
+}
+
+.companyline{
+	width: 860px;
+	padding: 0 100px 0 0;
+	margin: 0 auto;
+	position: relative;
+}
+
+.companyline ul{
+	padding: 0;
+}
+
+.langline {
+	text-align: right;
+	position: absolute;
+	top: -2px;
+	right: 0;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.localemenu{
+	position: absolute;
+	top: -170px;
+	left: 0px;
+}
+
+.localemenu ul{
+	background: white;
+	width: 90px;
+	padding: 5px 0;
+	border-radius: 5px;
+}
+
+.localemenu ul:before{
+	content: " ";
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    position: absolute;
+    top: 161px;
+    left: 35px;
+}
+
+.localemenu ul li{
+	list-style: none;
+	width: 70px;
+	text-align: left;
+	padding: 5px 5px 5px 15px;
+}
+
+.localemenu ul li:hover {
+	background: #BC8554;
+}
+.localemenu ul li:hover a {
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.localemenu ul li a{
+	color: black;
+}
+
+
+
+
+.langline img{
+	position: relative;
+	top: 2px;
+}
+
+.rem_for{
+	position: relative;
+	margin: 10px 0 0 0;
+	font-family: 'Casper_R';
+	color: black;
+}
+.rem_for input{
+	 position: relative;
+	 top: -1px;
+}
+
+.rem_for a{
+	text-decoration: none;
+	color:#BC8554;
+}
+
+.need {
+	text-align: center;
+	font-family: 'Casper_R';
+	font-size: 14px;
+	height: 39px;
+	line-height: 39px;
+}
+
+.forgot {
+	position: absolute;
+	top: 0;
+	right: 3px;
+}
+.forgot a{
+	color: lightgray;
+	text-decoration: none;
+}
+.forgot a:hover{
+	color: #000;
+}
+
+.Lightoak{
+	font-family: 'Casper_B';
+	font-size: 60px;
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+
+.nomagrin {
+	margin: 0 0 10px 0;
+}
+
+.companyline li{
+	list-style: none;
+	display: inline-block;
+	padding-right: 10px;
+}
+
+.companyline li a,
+.langline{
+	text-decoration: none;
+	color: rgba(255,255,255,1);
+	font-family: 'Casper_R';
+}
+
+.regform input[type=submit] {
+	background: #BC8554;
+}
+
 .logo img{
 	opacity: 1;
 	width: 80px;
@@ -186,7 +532,7 @@ body {
 .search input{
 	font-size: 14px;
 	padding: 4px 0 4px 8px;
-	font-family: 'Casper_It', regular;
+	font-family: 'Casper_R', regular;
 	border: none;
 	width: 60px;
 	margin: 0 10px;
@@ -326,7 +672,7 @@ font-family: calibri;
 	border: none;
 	background: #CA9F56;
 	color: white;
-	font-family: 'Casper_It';
+	font-family: 'Casper_R';
 	font-size: 15px;
 	border-radius: 3px;
 	cursor: pointer;
@@ -495,6 +841,55 @@ padding: 7px 0 0 0;
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+	border-radius: 0 0 5px 5px;
+}
+
+.forma{
+	position: relative;
+    width: 500px;
+    padding: 0;
+    border-radius: 5px;
+    color: black;
+}
+
+.forma .title{
+	background: #59A80F;
+	padding: 10px;
+	color: #fff;
+	font-family: 'Casper_B';
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 0 0;
+    font-size: 17px;
+    position: relative;
+}
+
+.forma .title .refresh,
+.forma .title .close {
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+}
+
+.forma .title .refresh{
+	right: 36px;
+	padding: 10px 10px 7px 10px;
+}
+
+.forma .title .close{
+	right: 0;
+	padding: 12px 10px 7px 10px;
+	border-radius: 0 5px 0 0;
+}
+
+.forma .title .refresh:hover,
+.forma .title .close:hover {
+	background: #4F960D;
+}
+
+.forma .text{
+	background: #fff;
+	font-family: calibri;
+	padding: 10px;
 	border-radius: 0 0 5px 5px;
 }
 

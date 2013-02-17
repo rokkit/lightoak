@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>lightoak hello</title>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/jquery.arcticmodal-0.2/jquery.arcticmodal-0.2.min.js"></script>
+        <link rel="stylesheet" href="js/jquery.arcticmodal-0.2/jquery.arcticmodal-0.2.css">
+        <script>
+        	$(function(){
+        		$(".video").click(function(){
+        			$('.vid').arcticmodal({
+                        closeOnOverlayClick: false,                    
+                        overlay: {
+                        css: {
+                        backgroundColor: '#000',
+                        opacity: .7
+                        }
+                        }
+                        });
+        		})
+        	})
+        </script>
+		<script>
+			$(function() {
+				$(".regform_new").hide();
+				$(".localemenu").hide();
+				
+				$(".regform").children("input").click(function(){
+					$(".authform ").hide();
+					$(".regform_new").show();
+				})
+				$(".go_reg").click(function() {
+					$(".regform_new").hide();
+					$(".authform ").show();
+				})
+				
+				$('.langlink').click(function(){
+					$(".localemenu").toggle();
+				});
+				
+			})
+		</script>
+	</head>
+	<body class="wood">
+	<div class="main_line">
+		<div class="authform white_bg">
+			<div class="loginform">
+				<div class="Lightoak">Lightoak</div>
+				<input type="text" name="login" placeholder="Логин">
+				<input type="password" name="password" placeholder="Пароль">
+				<div class="rem_for">
+					<label><input type="checkbox"> запомнить</label>
+					<div class="forgot"><a href="#">забыли пароль?</a></div>
+				</div>
+				<input type="submit" value="Войти">
+			</div>
+			<div class="regform">
+				<div class="hidden_video" style="display: none;">
+						<div class="vid">
+							<iframe width="853" height="480" src="http://www.youtube.com/embed/DbFUQOzI-yY?rel=0" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+				<div class="video" title="Просмотреть видео">
+					<img src="img/play_video.png" alt="">
+				</div>
+				<input type="submit" value="Регистрация">
+			</div>
+		</div>
+		<div class="regform_new white_bg">
+			<div class="Lightoak nomagrin">Lightoak</div>
+			<div class="registr">
+					Регистрация
+			</div>
+			<div class="inputs">
+				<div class="addphoto" title="Добавить фотографию профиля">
+					+ Фото
+				</div>
+				<input type="text" class="firtsname" placeholder="Имя">
+				<input type="text" class="lastname" placeholder="Фамилия">
+			</div>
+			<div class="inform">
+				Дата рождения:
+			</div>
+			<div class="data">
+				<input type="text" class="day" placeholder="ДД">
+				<input type="text" class="month" placeholder="ММ">
+				<input type="text" class="year" placeholder="ГГГГ">
+			</div>
+			<input type="text" name="email" class="email" placeholder="Email">
+			<input type="password" name="password" class="password" placeholder="Пароль">
+			<div class="rem_for">
+				<label><input type="checkbox"> Я принимаю условия <a href="#">Lightoak</a></label>
+			</div>
+			<input type="submit" class="go_reg" value="Зарегистрироваться">
+			<div class="need">
+				Все поля обязательны для заполнения
+			</div>
+		</div>
+	</div>
+		<div class="companyline">
+			<ul>
+				<li>
+					<a href="#">О нас</a>
+				</li>
+				<li>
+					<a href="#">Помощь</a>
+				</li>
+				<li>
+					<a href="#">Блог</a>
+				</li>
+			</ul>
+			<div class="langline">
+				<div class="langlink"><img src="img/globe.png" alt="">&nbsp;Русский</div>
+				<div class="localemenu">
+					<ul>
+						<li>
+							<a data-locale="ru" class="locale-option">Русский</a>
+						</li>
+						<li>
+							<a data-locale="en" class="locale-option">English</a>
+						</li>
+						<li>
+							<a data-locale="de" class="locale-option">Deutsch</a>
+						</li>
+						<li>
+							<a data-locale="fr" class="locale-option">Français</a>
+						</li>
+						<li>
+							<a data-locale="it" class="locale-option">(Топ 5)</a>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</body>
+</html>
