@@ -1,11 +1,14 @@
 Lightoak::Application.routes.draw do
-  get "pages/index"
 
-  get "pages/main"
+  scope 'api' do
+    resources :posts
+  end
+
+  get "pages/index"
 
   devise_for :users, controllers: { sessions: "api/auth/sessions", registrations: "api/auth/registrations"}
 
-
+  match '*posts', to: 'pages#index' # не поднимать выше
   # namespace :api do   
   #   namespace :auth do
   #     devise_for :users
