@@ -5,7 +5,7 @@ window.Lightoak =
   Routers: {}
   initialize: -> 
   	new Lightoak.Routers.Posts()
-  	Backbone.history.start()
+  	Backbone.history.start({pushState:true})
 
 $(document).ready ->
   Lightoak.initialize()
