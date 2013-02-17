@@ -6,7 +6,7 @@
 				
 				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 					<div class="Lightoak">Lightoak</div>
-				  <%= f.email_field  :email, name:'user[email]', :autofocus => true %>
+				  <%= f.email_field  :email, name:'user[email]'%>
 
 				  <%= f.password_field :password, name:'user[password]' %>
 
@@ -22,7 +22,7 @@
 				    </div>
 				  <% end -%>
 
-				  <div><%= f.submit "Sign in" %></div>
+				  <div><%= f.submit "Войти" %></div>
 				<% end %>
 			</div>
 			<div class="regform">
@@ -39,4 +39,40 @@
 			</div>
 		</div>
 		<%= render "/devise/shared/registration" %>
+		<div class="companyline">
+			<ul>
+				<li>
+					<a href="#">О нас</a>
+				</li>
+				<li>
+					<a href="#">Помощь</a>
+				</li>
+				<li>
+					<a href="#">Блог</a>
+				</li>
+			</ul>
+			<div class="langline">
+				<div class="langlink"><%= image_tag "globe.png" %>&nbsp;Русский
+
+				</div>
+				<div class="localemenu">
+					<ul>
+						<li>
+							<a data-locale="ru" class="locale-option">Русский</a>
+						</li>
+						<li>
+							<a data-locale="en" class="locale-option">English</a>
+						</li>
+						<li>
+							<a data-locale="de" class="locale-option">Deutsch</a>
+						</li>
+						<li>
+							<a data-locale="fr" class="locale-option">Français</a>
+						</li>
+						<li>
+							<a data-locale="it" class="locale-option">(Топ 5)</a>
+						</li>
+					</ul>
+			</div>
+		</div>
 	</div>
