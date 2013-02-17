@@ -264,6 +264,10 @@ body {
 	position: relative;
 }
 
+.companyline ul{
+	padding: 0;
+}
+
 .langline {
 	text-align: right;
 	position: absolute;
@@ -837,6 +841,55 @@ padding: 7px 0 0 0;
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+	border-radius: 0 0 5px 5px;
+}
+
+.forma{
+	position: relative;
+    width: 500px;
+    padding: 0;
+    border-radius: 5px;
+    color: black;
+}
+
+.forma .title{
+	background: #59A80F;
+	padding: 10px;
+	color: #fff;
+	font-family: 'Casper_B';
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 0 0;
+    font-size: 17px;
+    position: relative;
+}
+
+.forma .title .refresh,
+.forma .title .close {
+	position: absolute;
+	top: 0;
+	cursor: pointer;
+}
+
+.forma .title .refresh{
+	right: 36px;
+	padding: 10px 10px 7px 10px;
+}
+
+.forma .title .close{
+	right: 0;
+	padding: 12px 10px 7px 10px;
+	border-radius: 0 5px 0 0;
+}
+
+.forma .title .refresh:hover,
+.forma .title .close:hover {
+	background: #4F960D;
+}
+
+.forma .text{
+	background: #fff;
+	font-family: calibri;
+	padding: 10px;
 	border-radius: 0 0 5px 5px;
 }
 

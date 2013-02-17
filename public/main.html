@@ -8,6 +8,26 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/jquery.arcticmodal-0.2/jquery.arcticmodal-0.2.min.js"></script>
+        <link rel="stylesheet" href="js/jquery.arcticmodal-0.2/jquery.arcticmodal-0.2.css">
+        <script>
+        	$(function(){
+        		$(".menu_add").click(function(){
+        			$('.forma').arcticmodal({
+                        closeOnOverlayClick: false,                    
+                        overlay: {
+                        css: {
+                        backgroundColor: '#000',
+                        opacity: .7
+                        }
+                        }
+                        });
+        		})
+        		$(".add_div").children(".forma").children(".title").children(".close").click(function(){
+        			$('.forma').arcticmodal('close');
+        		})
+        	})
+        </script>
 	</head>
 	<body class="main_bg">
 		<div class="top_menu">
@@ -24,15 +44,40 @@
 						        </li>
 					</td>
 					<td class="notifications_button">
-						<img src="img/processor.png">
+						<img src="img/leaf.png" style="width: 24px;position: relative;top: 2px;"> 
 						<span class="notifications_bar">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sapiente quod unde quam consectetur molestiae deserunt praesentium ducimus! Necessitatibus culpa ipsa ab tenetur id eius quia quae minus eos accusantium. Eveniet debitis dolor voluptatibus suscipit nulla harum reiciendis ipsam veritatis quam illo. Voluptas repellendus quidem ipsa optio rerum maxime placeat quo porro ab explicabo. Assumenda id ad beatae nihil alias vero sed commodi sunt temporibus repudiandae nam tenetur vitae facilis itaque accusantium fuga libero consequatur. Inventore cum fugiat vero sint ducimus quod consequuntur quasi error voluptates necessitatibus culpa sed suscipit eius at natus odit dolorem excepturi neque aliquam corporis velit adipisci aut repudiandae laboriosam quaerat tenetur est numquam ipsum praesentium sunt rerum facere repellat repellendus maxime dolore provident voluptate pariatur assumenda possimus recusandae nam porro. Veritatis esse nesciunt laboriosam maiores vero accusantium molestiae ipsa. Eum reprehenderit laboriosam sunt unde aperiam consequuntur corrupti eos numquam praesentium saepe placeat officiis quisquam itaque illo aliquam quasi illum. Repellat vitae inventore debitis mollitia unde amet iste neque ducimus temporibus magnam itaque accusamus perspiciatis sit officia quibusdam sint reprehenderit tempora accusantium eaque quis modi eligendi blanditiis dolor ratione quia cum nihil. Dolores inventore beatae placeat modi optio nulla quae ab at atque. Aliquid nostrum voluptatibus mollitia ea quae maiores inventore blanditiis quasi eaque adipisci. Aliquam quod fugiat laborum quis aliquid tempora dignissimos fugit quos dolore adipisci minus accusantium corporis laudantium nisi eius natus autem est temporibus possimus hic illo sit dicta laboriosam numquam ad cumque incidunt aspernatur a maxime qui fuga exercitationem consectetur voluptate? Ducimus provident quaerat omnis quibusdam deserunt numquam delectus maiores praesentium odit nulla consequuntur cumque laborum consequatur ex maxime illo dolores magnam animi sunt molestiae quas eaque doloribus deleniti tenetur quos incidunt aperiam odio explicabo quisquam at necessitatibus quae officiis ea repellendus debitis quia voluptatem quasi quod repudiandae saepe quam eos aut!</span>
 					</td>
 					<td class="place_now"><span class="place">Web</span></td>
-					<td class="search"><input type="text" placeholder="поиск..." class="search_input"></td>
+					<td class="search">
+						<form action="main.html">
+							<input type="text" placeholder="поиск..." class="search_input" name="search">
+						</form>
+					</td>
 					<td class="menu_add" title="Разместить сообщение"><span class="add">+</span></td>
 				</tr>
 			</table>
-			
+			<div class="add_div" style="display: none;">
+				<div class="forma">
+					<div class="title">
+						Добавление записи
+						<div class="refresh" title="Обновить">
+							<img src="img/refresh.png" alt="" style="width: 16px;">
+						</div>
+						<div class="close" title="Закрыть">
+							<img src="img/delete.png" alt="">
+						</div>
+					</div>
+					<div class="text">
+						Выбор из дерева<br>
+						Текст сообщения<br>
+						Выбор языка урока (первый варинат - язкае текста сообщения), потом варианты топовых системы, потом варианты всех системы, потом варианты всех языков мира<br>
+						Лекция или урок<br>
+						Даты<br>
+						Длительность<br>
+						Стоимость<br>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="content">
