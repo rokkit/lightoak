@@ -13,7 +13,7 @@
         	})
 
 			$(function() {
-				$(".localemenu").hide();
+			    $(".localemenu").hide();
 				
 				$(".regform").children("input").click(function(){
 					$(".authform ").hide();
