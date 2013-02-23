@@ -3,11 +3,16 @@ class Lightoak.Views.PostsIndex extends Backbone.View
   template: JST['posts/index']
 
   events:
-  	'submit #new_post': 'createPost'
+    'submit #new_post': 'createPost'
+    'click #more_posts': 'nextResultPage'
+
 
   initialize: ->
-  	@collection.on('reset',@render, this)
-  	@collection.on('add',@appendPost, this)
+    @collection.on('reset',@render, @)
+    @collection.on('add',@appendPost, @)
+    @collection.on('all',@render,@)
+    @collection.pager()
+    console.log @collection
 
   render: ->
   	$(@el).html(@template())
@@ -32,3 +37,7 @@ class Lightoak.Views.PostsIndex extends Backbone.View
   		errors = $.parseJSON(response.responseText).errors
   		for attribute, messages of errors
   			alert "#{attribute} #{message}" for message in messages
+
+  nextResultPage: (event) ->
+    event.preventDefault()
+    @collection.requestNextPage()
