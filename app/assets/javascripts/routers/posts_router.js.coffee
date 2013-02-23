@@ -3,12 +3,22 @@ class Lightoak.Routers.Posts extends Backbone.Router
 		'':'index'
 		'posts/:id':'show'
 	initialize: ->
-		@collection = new Lightoak.Collections.Posts()
+		console.log "router init"
 
 	index: ->
-		@collection.fetch()
-		view = new Lightoak.Views.PostsIndex(collection: @collection)
+		collection = new Lightoak.Collections.Posts()
+		#collection.pager()
+		#collection.fetch()
+		console.log collection
+		view = new Lightoak.Views.PostsIndex(collection: collection)
 		$('#container').html(view.render().el)
 	show: (id) ->
-		view = new Lightoak.Views.PostsShow(model: @collection.get(id))
+		post = new Lightoak.Models.Post({id:id})
+		post.fetch
+			wait:true
+			success: @showPost
+		console.log post
+
+	showPost: (model, response) ->
+		view = new Lightoak.Views.PostsShow(model: model)
 		$('#container').html(view.render().el)

@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	respond_to :json
 
 	def index
-		respond_with Post.all
+		respond_with Post.paginate(:per_page => params[:per_page],:page => params[:page])
 	end
 
 	def show

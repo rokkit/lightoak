@@ -5,6 +5,8 @@ class Lightoak.Views.Post extends Backbone.View
 
   events:
   	'click':'showPost'
+  initialize: ->
+  			@model.bind('change', @render, this)
 
   render: ->
   	$(@el).html(@template(post: @model))
