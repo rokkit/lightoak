@@ -1,0 +1,26 @@
+<div id="webcam">c</div>
+<p id="captyre">Captyre</p>
+<script type="text/javascript">
+  webcam.set_swf_url('/webcam.swf');
+  webcam.set_api_url("/api/photos/upload?name_photo=<%= session[:session_id].to_s %>");
+  webcam.set_quality(90);
+  webcam.set_shutter_sound(true, '/shutter.mp3');
+  webcam.set_hook('onComplete', 'upload_complete');
+
+  function upload_complete(msg) {
+  if (msg == 'ok') {
+    $('new_photo').show();
+  } else {
+    alert('An error occured');
+    webcam.reset();
+  }
+}
+
+  $(function () {
+  		$('#webcam').html(webcam.get_html(320, 240))
+  		$('#captyre').click(function(){
+  			webcam.snap()
+  		})
+  })
+
+</script>

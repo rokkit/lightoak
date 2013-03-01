@@ -1,0 +1,43 @@
+<div class="regform_new white_bg">
+			<div class="Lightoak nomagrin">Lightoak</div>
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+
+			
+
+			<div class="registr">
+					Регистрация
+			</div>
+			<div class="inputs">
+				<div class="addphoto" title="Добавить фотографию профиля">
+					+ Фото
+					<%= f.file_field :avatar %>
+				</div>
+				<!-- <input type="text" class="firtsname" placeholder="Имя"> -->
+				<%= f.text_field :name, class:'firtsname' %>
+				<!-- <input type="text" class="lastname" placeholder="Фамилия"> -->
+				<%= f.text_field :last, class:'lastname' %>
+			</div>
+			<div class="inform">
+				Дата рождения:
+			</div>
+			<div class="data">
+				<input type="text" class="day" placeholder="ДД">
+				<input type="text" class="month" placeholder="ММ">
+				<input type="text" class="year" placeholder="ГГГГ">
+			</div>
+
+			<%= f.email_field :email, class:'email' %>
+			<input type="hidden" name="avatar_name" value="<%= session[:session_id].to_s %>">
+			<%= f.password_field :password, class:'password' %>
+			<div class="rem_for">
+				<label><input type="checkbox"> Я принимаю условия <a href="#">Lightoak</a></label>
+			</div>
+			<%= f.submit "Зарегистрироваться", class:'go_reg' %>
+			
+			<div class="need">
+				Все поля обязательны для заполнения
+			</div>
+	<% end %>
+						<%= render "devise/shared/camera" %>
+</div>
