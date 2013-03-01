@@ -1,3 +1,0 @@
-Контент:<%= @post.get('content') %>
-Цена:<%= @post.get('price') %>
-Автор:<%= @post.get('user_id') %>
