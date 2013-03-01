@@ -6,11 +6,19 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email,:name,:last,:photo,:birthday, :password, :remember_me
+  attr_accessible :email,:name,:avatar,:last,:photo,:birthday, :password, :remember_me
   #:password_confirmation, 
-  
-  # attr_accessible :title, :body
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, 
+      :default_url => "/images/:style/missing.png",
+      :storage => :s3,
+      :s3_credentials => "#{Rails.root}/config/aws.yml",
+      :bucket => "lightoak_avatars";
+
   before_save :ensure_authentication_token
   
-  has_many :posts
+  has_many :posts, :dependent => :destroy
+
+
+
+
 end

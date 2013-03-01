@@ -2,6 +2,7 @@ Lightoak::Application.routes.draw do
 
   scope 'api' do
     resources :posts
+    match 'photos/upload' => 'photos#upload'
   end
 
   get "pages/index"

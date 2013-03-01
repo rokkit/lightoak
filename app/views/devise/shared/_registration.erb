@@ -11,11 +11,12 @@
 			<div class="inputs">
 				<div class="addphoto" title="Добавить фотографию профиля">
 					+ Фото
+					<%= f.file_field :avatar %>
 				</div>
 				<!-- <input type="text" class="firtsname" placeholder="Имя"> -->
-				<%= f.text_field :name, class:'firtsname', :autofocus => true %>
+				<%= f.text_field :name, class:'firtsname' %>
 				<!-- <input type="text" class="lastname" placeholder="Фамилия"> -->
-				<%= f.text_field :last, class:'lastname', :autofocus => true %>
+				<%= f.text_field :last, class:'lastname' %>
 			</div>
 			<div class="inform">
 				Дата рождения:
@@ -33,9 +34,10 @@
 				<label><input type="checkbox"> Я принимаю условия <a href="#">Lightoak</a></label>
 			</div>
 			<%= f.submit "Зарегистрироваться", class:'go_reg' %>
-
+			
 			<div class="need">
 				Все поля обязательны для заполнения
 			</div>
 	<% end %>
+						<%= render "devise/shared/camera" %>
 </div>
