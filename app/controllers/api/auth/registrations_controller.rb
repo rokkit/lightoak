@@ -6,7 +6,7 @@ class Api::Auth::RegistrationsController < Devise::RegistrationsController
       format.html {
         super
         self.resource
-        file_name = "#{Rails.root}/public/img/uploads/#{session[:session_id].to_s}.jpg"
+        file_name = "#{Rails.root}/public/img/uploads/#{params[:avatar_name]}.jpg"
         if File.exist? file_name 
           self.resource.avatar = File.new(file_name)
           self.resource.avatar.save
