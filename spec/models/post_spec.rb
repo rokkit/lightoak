@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Post do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) { create :user }
+  it { should belong_to(:user) }
 end

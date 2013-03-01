@@ -5,25 +5,26 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
-group :development, :test do
-  gem 'sqlite3'
-  gem 'rspec-rails','2.6.1.beta1'
-end
-
 group :production do
   gem 'pg'
 end
 
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'faker'
+  gem 'factory_girl_rails'
+end
+
+
+
 group :test do
-  gem 'rspec', '2.6'
+  gem 'shoulda-matchers'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'email_spec'
   gem 'timecop'
   gem 'launchy'
-  gem 'cucumber-rails', :require => false
 end
 
 # Gems used only for assets and not required
@@ -33,18 +34,20 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
 gem 'execjs'
-gem 'therubyracer'
+
 gem 'heroku'
 gem 'devise'
 gem 'backbone-on-rails'
 gem 'will_paginate', '~> 3.0'
+gem 'paperclip'
+gem 'aws-sdk'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

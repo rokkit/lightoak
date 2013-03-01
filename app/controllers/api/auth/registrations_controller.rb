@@ -3,7 +3,16 @@ class Api::Auth::RegistrationsController < Devise::RegistrationsController
   
   def create
     respond_to do |format|
-      format.html {super}
+      format.html {
+        super
+        self.resource
+        file_name = "#{Rails.root}/public/img/uploads/#{params[:avatar_name]}.jpg"
+        if File.exist? file_name 
+          self.resource.avatar = File.new(file_name)
+          self.resource.avatar.save
+          self.resource.save
+        end
+      }
       format.json {
         user = User.new(params[:user])
         if user.save
