@@ -6,9 +6,9 @@
 				
 				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 					<div class="Lightoak">Lightoak</div>
-				  <%= f.email_field  :email, name:'user[email]'%>
+				  <%= f.email_field  :email,id:'user_email_login', name:'user[email]'%>
 
-				  <%= f.password_field :password, name:'user[password]' %>
+				  <%= f.password_field :password,id:'user_password_login', name:'user[password]' %>
 
 				  <% if devise_mapping.rememberable? -%>
 				    <div lass="rem_for">

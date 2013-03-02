@@ -6,3 +6,6 @@
   production:
     access_key_id: AKIAIMLXHZMLCIYL2SEA
     secret_access_key: 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
+  test:
+    access_key_id: AKIAIMLXHZMLCIYL2SEA
+    secret_access_key: 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
