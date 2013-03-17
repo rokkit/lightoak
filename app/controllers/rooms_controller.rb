@@ -5,7 +5,7 @@ class RoomsController < ApplicationController
 		@post = Post.find(params[:id])
 
 		respond_to do |format|
-			if post.update_attributes(room_id:session.session_id)
+			if @post.update_attributes(room_id:session.session_id)
 				format.html { redirect_to("/room/"+@post.id.to_s) }
 			end
 		end
