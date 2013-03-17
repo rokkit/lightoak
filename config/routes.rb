@@ -6,7 +6,9 @@ Lightoak::Application.routes.draw do
   end
 
   get "pages/index"
-
+  get "rooms/create"
+  get "rooms/room"
+  get "rooms/index"
   devise_for :users, controllers: { sessions: "api/auth/sessions", registrations: "api/auth/registrations"}
 
   match '*posts', to: 'pages#index' # не поднимать выше

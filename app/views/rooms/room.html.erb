@@ -1,0 +1,8 @@
+<h1>Room</h1>
+<div id="self_video"></div>
+<div id="subscribers"></div>
+<script type="text/javascript">
+	$(function() {
+		RoomModule.init("<%= @post.room_id %>", "<%= @token %>")
+	})
+</script>

@@ -48,6 +48,7 @@ gem 'backbone-on-rails'
 gem 'will_paginate', '~> 3.0'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'opentok'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

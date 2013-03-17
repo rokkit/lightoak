@@ -8,3 +8,6 @@
 <%= link_to "Log out", destroy_user_session_path, method: :delete  %>
 <% end %>
 <div id="container">Loading...</div>
+<div id="current_lesson">
+	<%= link_to @current_lesson, controller:'rooms', action:'room', id:@current_lesson.id %>
+</div>
