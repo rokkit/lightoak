@@ -17,8 +17,10 @@ class User < ActiveRecord::Base
   before_save :ensure_authentication_token
   
   has_many :posts, :dependent => :destroy
-
-
+  
+  validates :name, :last, :email, :password, :avatar, presence: true
+  validates_attachment_content_type :avatar, :content_type => /^image\/(jpg|jpeg|pjpeg|png|x-png|gif)$/, :message => 'file type is not allowed (only jpeg/png/gif images)'
+  validates_attachment_size :avatar, :less_than => 2.megabyte
 
 
 end
