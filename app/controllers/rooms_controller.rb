@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
 
 	def room
-		@post = Post.find(params[:id])
+		@post = Post.first
 		config_opentok
 		create_opentok_session @post
 		

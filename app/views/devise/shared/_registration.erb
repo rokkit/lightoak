@@ -1,43 +1,43 @@
-		<div class="regform_new white_bg one">
-			<div class="registr">
-					Регистрация
-			</div>
-			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-			<div class="inputs">
-				<div class="addphoto" title="Добавить фотографию профиля" onclick="$('.one').fadeOut('normal', function(){$('.two').fadeIn();});">
-					<img src="https://s3.amazonaws.com/askedon/static/photoimg.png" id="profile_photo" alt="">фото
-				</div>
-				<%= f.text_field :name, class:'firtsname' %>
-				<%= f.text_field :last, class:'lastname' %>
-				<input type="hidden" name="avatar_name" value="<%= session[:session_id].to_s %>">
-			</div>
-			<div class="inform">
-				Дата рождения:
-			</div>
-			<div class="data">
-				<input type="text" class="day_in" placeholder="дд">
-				<input type="text" class="month" placeholder="мм">
-				<input type="text" class="year" placeholder="гггг">
-			</div>
-			<%= f.email_field :email, class:'email' %>
-			<%= f.password_field :password, class:'password' %>
-			<div class="rem_for">
-				<label><input type="checkbox"> Я принимаю условия <a href="#">Lightoak</a></label>
-			</div>
-			<%= f.submit "Зарегистрироваться", class:'go_reg' %>
-			<div class="need">
-				Все поля обязательны для заполнения
-			</div>
-			<% end %>
-		</div>
-		<div class="two" style="display:none;padding: 40px 0 0 0;">
-			<div class="regform_new white_bg" >
-				<div class="photohere">
-					<%= render "/devise/shared/camera" %>
-			</div>
-			<button class="inp_pic"><img src="https://s3.amazonaws.com/askedon/static/photo_camera.png" alt=""></button>
-			<button class="inp_pic"><img src="https://s3.amazonaws.com/askedon/static/photo_file.png" alt=""></button>
-			<button class="save_pic" id="captyre" >Сохранить</button>
-			</div>
-			
-		</div>
+  <div class="regform_new white_bg one">
+   <div class="registr">
+     Регистрация
+   </div>
+   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+   <div class="inputs">
+    <div class="addphoto" title="Добавить фотографию профиля" onclick="$('.one').fadeOut('normal', function(){$('.two').fadeIn();});">
+     <img src="https://s3.amazonaws.com/askedon/static/photoimg.png" id="profile_photo" alt="">фото
+    </div>
+    <%= f.text_field :name, class:'firtsname',placeholder: 'Имя' %>
+    <%= f.text_field :last, class:'lastname', placeholder: 'Фамилия' %>
+    <input type="hidden" name="avatar_name" value="<%= session[:session_id].to_s %>">
+   </div>
+   <div class="inform">
+    Дата рождения:
+   </div>
+   <div class="data">
+    <input type="text" class="day_in" placeholder="дд">
+    <input type="text" class="month" placeholder="мм">
+    <input type="text" class="year" placeholder="гггг">
+   </div>
+   <%= f.email_field :email, class:'email', placeholder: 'почта' %>
+   <%= f.password_field :password, class:'password', placeholder: 'пароль' %>
+   <div class="rem_for">
+    <label><input type="checkbox"> Я принимаю условия <a href="#">Lightoak</a></label>
+   </div>
+   <%= f.submit "Зарегистрироваться", class:'go_reg' %>
+   <div class="need">
+    Все поля обязательны для заполнения
+   </div>
+   <% end %>
+  </div>
+  <div class="two" style="display:none;padding: 40px 0 0 0;">
+   <div class="regform_new white_bg" >
+    <div class="photohere">
+     <%= render "/devise/shared/camera" %>
+   </div>
+   <button class="inp_pic"><img src="https://s3.amazonaws.com/askedon/static/photo_camera.png" alt=""></button>
+   <button class="inp_pic"><img src="https://s3.amazonaws.com/askedon/static/photo_file.png" alt=""></button>
+   <button class="save_pic" id="captyre" >Сохранить</button>
+   </div>
+   
+  </div>

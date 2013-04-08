@@ -10,7 +10,6 @@
           </div>
           <div class="profile_name">
             <%= link_to "#{current_user.name} #{current_user.last}", controller: :pages, action: :profile %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete  %>
           </div>
         </div>
         <div class="create_post">

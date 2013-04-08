@@ -2,9 +2,9 @@
 
 
         <script>
-        	$(function(){
-        		$(".video").click(function(){
-        			$('.vid').arcticmodal({
+         $(function(){
+          $(".video").click(function(){
+           $('.vid').arcticmodal({
                         closeOnOverlayClick: false,                    
                         overlay: {
                         css: {
@@ -13,90 +13,90 @@
                         }
                         }
                         });
-        		})
-        	})
+          })
+         })
         </script>
-		<script>
-			$(function() {
-				$("body").addClass("welcome_bg");
-				// $(".regform_new").hide();
-				$(".localemenu").hide();
-				
-				$(".regform").children("input").click(function(){
-					$("html, body").animate({ scrollTop: 790 }, 'slow');
-  					return false;
-				})
-				$(".go_reg").click(function() {
-					
-				})
-				
-				$('.langlink').click(function(){
-					$(".localemenu").toggle();
-				});
-				
-			})
-		</script>
+  <script>
+   $(function() {
+    $("body").addClass("welcome_bg");
+    // $(".regform_new").hide();
+    $(".localemenu").hide();
+    
+    $(".regform").children("input").click(function(){
+     $("html, body").animate({ scrollTop: 790 }, 'slow');
+       return false;
+    })
+    $(".go_reg").click(function() {
+     
+    })
+    
+    $('.langlink').click(function(){
+     $(".localemenu").toggle();
+    });
+    
+   })
+  </script>
 
-	<div class="main_line">
-		<div class="authform white_bg">
-			
-			<div class="regform">
-				<div class="hidden_video" style="display: none;">
-						<div class="vid">
-							<iframe src="http://player.vimeo.com/video/12852832?byline=0" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-						</div>
-					</div>
-				<div class="video" title="Просмотреть видео">
-					<img src="https://s3.amazonaws.com/askedon/static/play_video_wh.png" alt="">
-				</div>
-				<input type="submit" value="Регистрация">
-			</div>
-			<div class="loginform">
-				<div class="Lightoak">
-					логотип будет здесь
-				</div>
-				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-				<%= f.text_field  :email, name:'user[email]'%>
-				<%= f.password_field :password, name:'user[password]' %>
-				<div class="rem_for">
-					<label><%= f.check_box :remember_me %> запомнить</label>
-					<div class="forgot"><%= link_to "забыли пароль?", new_password_path(resource_name) %></div>
-				</div>
-				<%= f.submit "Войти" %>
-				<% end %>
-			</div>
-		</div>
-		<%= render "/devise/shared/registration" %>
-	</div>
-		<div class="companyline">
-			<ul>
-				<li>
-					<a href="#">О нас</a>
-				</li>
-				<li>
-					<a href="#">Помощь</a>
-				</li>
-				<li>
-					<a href="#">Блог</a>
-				</li>
-			</ul>
-			<div class="langline">
-				<div class="langlink"><img src="https://s3.amazonaws.com/askedon/static/globe_wh.png" alt="">&nbsp;Русский</div>
-				<div class="localemenu">
-					<ul>
-						<li>
-							<a data-locale="ru" class="locale-option">Русский</a>
-						</li>
-						<li>
-							<a data-locale="en" class="locale-option">English</a>
-						</li>
-						<li>
-							<a data-locale="de" class="locale-option">Deutsch</a>
-						</li>
-						<li>
-							<a data-locale="fr" class="locale-option">Français</a>
-						</li>
-					</ul>
-			</div>
-		</div>
-	</div>
+ <div class="main_line">
+  <div class="authform white_bg">
+   
+   <div class="regform">
+    <div class="hidden_video" style="display: none;">
+      <div class="vid">
+       <iframe src="http://player.vimeo.com/video/12852832?byline=0" width="960" height="540" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      </div>
+     </div>
+    <div class="video" title="Просмотреть видео">
+     <img src="https://s3.amazonaws.com/askedon/static/play_video_wh.png" alt="">
+    </div>
+    <input type="submit" value="Регистрация">
+   </div>
+   <div class="loginform">
+    <div class="Lightoak">
+     логотип будет здесь
+    </div>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= f.text_field  :email, name:'user[email]', placeholder:'почта'%>
+    <%= f.password_field :password, name:'user[password]', placeholder:'почта'%>
+    <div class="rem_for">
+     <label><%= f.check_box :remember_me %> запомнить</label>
+     <div class="forgot"><%= link_to "забыли пароль?", new_password_path(resource_name) %></div>
+    </div>
+    <%= f.submit "Войти" %>
+    <% end %>
+   </div>
+  </div>
+  <%= render "/devise/shared/registration" %>
+ </div>
+  <div class="companyline">
+   <ul>
+    <li>
+     <a href="#">О нас</a>
+    </li>
+    <li>
+     <a href="#">Помощь</a>
+    </li>
+    <li>
+     <a href="#">Блог</a>
+    </li>
+   </ul>
+   <div class="langline">
+    <div class="langlink"><img src="https://s3.amazonaws.com/askedon/static/globe_wh.png" alt="">&nbsp;Русский</div>
+    <div class="localemenu">
+     <ul>
+      <li>
+       <a data-locale="ru" class="locale-option">Русский</a>
+      </li>
+      <li>
+       <a data-locale="en" class="locale-option">English</a>
+      </li>
+      <li>
+       <a data-locale="de" class="locale-option">Deutsch</a>
+      </li>
+      <li>
+       <a data-locale="fr" class="locale-option">Français</a>
+      </li>
+     </ul>
+   </div>
+  </div>
+ </div>
