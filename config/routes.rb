@@ -6,6 +6,7 @@ Lightoak::Application.routes.draw do
   end
 
   get "pages/index"
+  get "pages/profile"
   get "rooms/create"
   get "rooms/room"
   get "rooms/index"

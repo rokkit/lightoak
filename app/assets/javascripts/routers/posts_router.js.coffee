@@ -11,7 +11,7 @@ class Lightoak.Routers.Posts extends Backbone.Router
 		#collection.fetch()
 		console.log collection
 		view = new Lightoak.Views.PostsIndex(collection: collection)
-		$('#container').html(view.render().el)
+		$('#posts_block').html(view.render().el)
 	show: (id) ->
 		post = new Lightoak.Models.Post({id:id})
 		post.fetch
@@ -21,4 +21,4 @@ class Lightoak.Routers.Posts extends Backbone.Router
 
 	showPost: (model, response) ->
 		view = new Lightoak.Views.PostsShow(model: model)
-		$('#container').html(view.render().el)
+		$('#posts_block').html(view.render().el)

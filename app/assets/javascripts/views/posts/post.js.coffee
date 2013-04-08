@@ -1,7 +1,7 @@
 class Lightoak.Views.Post extends Backbone.View
 
   template: JST['posts/post']
-  tagName: 'li'
+  tagName: 'div'
 
   events:
   	'click':'showPost'

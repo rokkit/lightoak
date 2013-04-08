@@ -1,5 +1,4 @@
 <div id="webcam">c</div>
-<p id="captyre">Captyre</p>
 <script type="text/javascript">
   webcam.set_swf_url('/webcam.swf');
   webcam.set_api_url("/api/photos/upload?name_photo=<%= session[:session_id].to_s %>");
@@ -8,8 +7,9 @@
   webcam.set_hook('onComplete', 'upload_complete');
 
   function upload_complete(msg) {
-  if (msg == 'ok') {
+  if (msg != '') {
     $('new_photo').show();
+    $("#profile_photo").attr("src",msg);
   } else {
     alert('An error occured');
     webcam.reset();
@@ -17,9 +17,10 @@
 }
 
   $(function () {
-  		$('#webcam').html(webcam.get_html(320, 240))
+  		$('#webcam').html(webcam.get_html(280, 280))
   		$('#captyre').click(function(){
   			webcam.snap()
+        $('.two').fadeOut('normal', function(){$('.one').fadeIn();});
   		})
   })
 

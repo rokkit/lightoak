@@ -5,4 +5,8 @@ class PagesController < ApplicationController
   	@current_lesson = Post.first()
   end
 
+  def profile
+  	@current_lesson = Post.first()
+  end
+
 end

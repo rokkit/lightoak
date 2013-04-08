@@ -3,14 +3,16 @@
 <head>
   <title>Lightoak</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag 'webcam' %>
   <script src="http://static.opentok.com/v1.1/js/TB.min.js" type="text/javascript" charset="utf-8"></script>
   <%= csrf_meta_tags %>
 </head>
-<body class="wood">
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<body>
+<!-- <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p> -->
 <%= yield %>
 
 </body>

@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email,:name,:avatar,:last,:photo,:birthday, :password, :remember_me
-  #:password_confirmation, 
+  #:password_confirmati on, 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, 
       :default_url => "/images/:style/missing.png",
       :storage => :s3,

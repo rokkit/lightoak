@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
 		File.open(upload_path, 'wb') do |f|
 	    	f.write request.raw_post
 	  	end
-		render :text => "ok"
+		render json: upload_path.to_s
 	end
 
 private 
