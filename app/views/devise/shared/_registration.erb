@@ -5,7 +5,7 @@
 			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 			<div class="inputs">
 				<div class="addphoto" title="Добавить фотографию профиля" onclick="$('.one').fadeOut('normal', function(){$('.two').fadeIn();});">
-					<img src="/img/photoimg.png" id="profile_photo" alt="">фото
+					<img src="https://s3.amazonaws.com/askedon/static/photoimg.png" id="profile_photo" alt="">фото
 				</div>
 				<%= f.text_field :name, class:'firtsname' %>
 				<%= f.text_field :last, class:'lastname' %>
@@ -35,8 +35,8 @@
 				<div class="photohere">
 					<%= render "/devise/shared/camera" %>
 			</div>
-			<button class="inp_pic"><img src="/img/photo_camera.png" alt=""></button>
-			<button class="inp_pic"><img src="/img/photo_file.png" alt=""></button>
+			<button class="inp_pic"><img src="https://s3.amazonaws.com/askedon/static/photo_camera.png" alt=""></button>
+			<button class="inp_pic"><img src="https://s3.amazonaws.com/askedon/static/photo_file.png" alt=""></button>
 			<button class="save_pic" id="captyre" >Сохранить</button>
 			</div>
 			
