@@ -49,6 +49,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'opentok'
+gem 'active_model_serializers'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

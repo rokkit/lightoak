@@ -1,40 +1,39 @@
 
 <div class="post_item">
-						<div class="post_header">
-							<div class="user_photo">
-								<img src="img/user1.png" alt="">
-							</div>
-							<div class="user_name">
-								Петров <br>Василий
-							</div>
-							<div class="lesson_time">
-								00:13
-							</div>
-						</div>
-						<div class="post_message">
-							<%= @post.get('content') %>
-						</div>
-						<div class="post_footer">
-							<div class="country">
-								<img src="img/Canada_flat.png" alt="" title="Canada">
-							</div>
-							<div class="country">
-								<img src="img/Ireland_flat.png" alt="" title="Ireland">
-							</div>
-							<div class="price">
-								300
-								<div class="actions">
-									<ul>
-										<li style="color: #666;">
-											150 час
-										</li>
-										<li>
-											2 часа
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="type">
-								
-							</div>
+ <div class="post_header">
+  <div class="user_photo">
+     <img src="<%=@post.get('user').avatar%>" alt="">
+   </div>
+   <div class="user_name">
+     <%= @post.get('user').user.name %> <br><%= @post.get('user').user.last %>
+   </div>
+   <div class="lesson_time">
+     00:13
+   </div>
+ </div>
+ <div class="post_message">
+   <%= @post.get('content') %>
+ </div>
+ <div class="post_footer">
+   <div class="country">
+     <img src="https://s3.amazonaws.com/askedon/static/Canada_flat.png" alt="" title="Canada">
+   </div>
+   <div class="country">
+     <img src="https://s3.amazonaws.com/askedon/static/Ireland_flat.png" alt="" title="Ireland">
+   </div>
+   <div class="price">
+     <%= @post.get('price') %>
+     <div class="actions">
+       <ul>
+         <li style="color: #666;">
+           150 час
+         </li>
+         <li>
+           2 часа
+         </li>
+       </ul>
+     </div>
+   </div>
+   <div class="type">
+   </div>
 </div>

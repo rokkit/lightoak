@@ -1,7 +1,7 @@
 class Lightoak.Models.Post extends Backbone.Model
 	url: ->
 	    if this.isNew()
-	      return "/api/posts"
+	      return "/api/posts.json"
 	    else 
 	      return "/api/posts/" + this.id
 	initialize: ->

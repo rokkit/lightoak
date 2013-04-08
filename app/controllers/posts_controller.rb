@@ -2,7 +2,12 @@ class PostsController < ApplicationController
 	respond_to :json
 
 	def index
-		respond_with Post.paginate(:per_page => params[:per_page],:page => params[:page])
+
+		 #format. { Post.paginate(:per_page => params[:per_page],:page => params[:page]) }
+		 #format.json { 
+		 	render json: Post.paginate(:per_page => params[:per_page],:page => params[:page]),:root => false 
+		 #}
+	
 	end
 
 	def show

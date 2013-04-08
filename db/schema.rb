@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130317094953) do
+ActiveRecord::Schema.define(:version => 20130408162250) do
 
   create_table "posts", :force => true do |t|
     t.text     "content"
-    t.integer  "type"
+    t.integer  "ptype"
     t.decimal  "price"
     t.integer  "user_id"
     t.datetime "created_at", :null => false

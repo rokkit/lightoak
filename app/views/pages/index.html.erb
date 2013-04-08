@@ -2,93 +2,93 @@
 
 <div class="dark"></div>
 
-		<div class="menu_line">
-			<div class="content_menu_line">
-				<div class="profile_block" onclick="document.location.href = 'profile.html';">
-					<div class="profile_img">
-						<%= image_tag current_user.avatar.url(:thumb) %>
-					</div>
-					<div class="profile_name">
-						<%= link_to "#{current_user.name} #{current_user.last}", controller: :pages, action: :profile %>
-						<%= link_to "Log out", destroy_user_session_path, method: :delete  %>
-					</div>
-				</div>
-				<div class="create_post">
-					+
-				</div>
-				<div class="search_block">
-					<form action="main.html" autocomplete="off">
-						<input type="text" name="search" placeholder="просто напишите тут то, что хотите найти..." class="input_search_text">
-						<div class="seach_content">
-							..а результаты поиска вы увидите тут
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+    <div class="menu_line">
+      <div class="content_menu_line">
+        <div class="profile_block" onclick="document.location.href = 'profile.html';">
+          <div class="profile_img">
+            <%= image_tag current_user.avatar.url(:thumb) %>
+          </div>
+          <div class="profile_name">
+            <%= link_to "#{current_user.name} #{current_user.last}", controller: :pages, action: :profile %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete  %>
+          </div>
+        </div>
+        <div class="create_post">
+          +
+        </div>
+        <div class="search_block">
+          <form action="main.html" autocomplete="off">
+            <input type="text" name="search" placeholder="просто напишите тут то, что хотите найти..." class="input_search_text">
+            <div class="seach_content">
+              ..а результаты поиска вы увидите тут
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
 <div class="main_content">
 <div class="left_block">
-				<div class="select_mode">
-					<button class="teacher_button disabled">
-						Учитель
-					</button>
-					<button class="learner_button">
-						Ученик
-					</button>
-				</div>
-				<div class="calendar">
-					<img src="img/calendar_2.png" alt="" style="width: 280px;">
-				</div>
-				<div class="day_time">
-					<button class="morning disabled" title="Утро">
-						<img src="img/morn_icon.png" alt="" style="position: relative; top:2px;width: 26px;">
-					</button>
-					<button class="day disabled" title="День">
-						<img src="img/day_icon.png" alt="" style="position: relative; top:2px;width: 26px;">
-					</button>
-					<button class="evening disabled" title-"Вечер">
-						<img src="img/even_icon.png" alt="" style="position: relative; top:2px;width: 26px;">
-					</button>
-					<button class="night" title="Ночь">
-						<img src="img/night_icon.png" alt="" style="position: relative;width: 26px; top: 2px;">
-					</button>
-				</div>
-				<div class="tree_blocks">
-					<div class="tree_item">Игры </div>
-					<div class="tree_item">Книги </div>
-					<div class="tree_item">Обои для рабочего стола и другие картинки</div>
-					<div class="tree_item">Недвижимость </div>
-					<div class="tree_item">Строительство </div>
-					<div class="tree_item">Туризм </div>
-					<div class="tree_item">Автомобили </div>
-					<div class="tree_item">Компьютеры </div>
-					<div class="tree_item">Свадьбы </div>
-					<div class="tree_item">Здоровье </div>
-					<div class="tree_item">Веб-дизайн </div>
-					<div class="tree_item">Знакомства </div>
-					<div class="tree_item">Финансы </div>
-					<div class="tree_item">Услуги </div>
-					<div class="tree_item">Медицина </div>
-					<div class="tree_item">Банки </div>
-					<div class="tree_item">Бизнес </div>
-					<div class="tree_item">Промышленность </div>
-					<div class="tree_item">Производство </div>
-					<div class="tree_item">Техника </div>
-					<div class="tree_item">Заработок в интернете </div>
-					<div class="tree_item">Города и страны </div>
-					<div class="tree_item">Мобильные телефоны и другая техника </div>
-					<div class="tree_item">Музыка </div>
-					<div class="tree_item">Спортивная</div>
-				</div>
-			</div>
-			<div class="content_block">
-				<div class="sort_line">
-					Сортировать по: <a href="#">стоимости</a> <a href="#">отзывам</a> <a href="#">времени</a>
-				</div>
-				<div class="posts_block" id="posts_block"></div>
-								<div class="load_more" id="more_posts">
-					Загрузить больше уроков
-				</div>
-			</div>
+        <div class="select_mode">
+          <button class="teacher_button disabled">
+            Учитель
+          </button>
+          <button class="learner_button">
+            Ученик
+          </button>
+        </div>
+        <div class="calendar">
+          <img src="https://s3.amazonaws.com/askedon/static/calendar_2.png" alt="" style="width: 280px;">
+        </div>
+        <div class="day_time">
+          <button class="morning disabled" title="Утро">
+            <img src="https://s3.amazonaws.com/askedon/static/morn_icon.png" alt="" style="position: relative; top:2px;width: 26px;">
+          </button>
+          <button class="day disabled" title="День">
+            <img src="https://s3.amazonaws.com/askedon/static/day_icon.png" alt="" style="position: relative; top:2px;width: 26px;">
+          </button>
+          <button class="evening disabled" title-"Вечер">
+            <img src="https://s3.amazonaws.com/askedon/static/even_icon.png" alt="" style="position: relative; top:2px;width: 26px;">
+          </button>
+          <button class="night" title="Ночь">
+            <img src="https://s3.amazonaws.com/askedon/static/night_icon.png" alt="" style="position: relative;width: 26px; top: 2px;">
+          </button>
+        </div>
+        <div class="tree_blocks">
+          <div class="tree_item">Игры </div>
+          <div class="tree_item">Книги </div>
+          <div class="tree_item">Обои для рабочего стола и другие картинки</div>
+          <div class="tree_item">Недвижимость </div>
+          <div class="tree_item">Строительство </div>
+          <div class="tree_item">Туризм </div>
+          <div class="tree_item">Автомобили </div>
+          <div class="tree_item">Компьютеры </div>
+          <div class="tree_item">Свадьбы </div>
+          <div class="tree_item">Здоровье </div>
+          <div class="tree_item">Веб-дизайн </div>
+          <div class="tree_item">Знакомства </div>
+          <div class="tree_item">Финансы </div>
+          <div class="tree_item">Услуги </div>
+          <div class="tree_item">Медицина </div>
+          <div class="tree_item">Банки </div>
+          <div class="tree_item">Бизнес </div>
+          <div class="tree_item">Промышленность </div>
+          <div class="tree_item">Производство </div>
+          <div class="tree_item">Техника </div>
+          <div class="tree_item">Заработок в интернете </div>
+          <div class="tree_item">Города и страны </div>
+          <div class="tree_item">Мобильные телефоны и другая техника </div>
+          <div class="tree_item">Музыка </div>
+          <div class="tree_item">Спортивная</div>
+        </div>
+      </div>
+      <div class="content_block">
+        <div class="sort_line">
+          Сортировать по: <a href="#">стоимости</a> <a href="#">отзывам</a> <a href="#">времени</a>
+        </div>
+        <div class="posts_block" id="posts_block"></div>
+                <div class="load_more" id="more_posts">
+          Загрузить больше уроков
+        </div>
+      </div>
 </div>
