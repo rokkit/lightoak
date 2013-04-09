@@ -9,6 +9,6 @@ class PhotosController < ApplicationController
 private 
 	def upload_path # is used in upload and create
   		file_name = params[:name_photo].to_s + '.jpg'
-  		File.join(Rails.root, 'public','img', 'uploads', file_name)
+  		File.join(Rails.root, 'public', file_name)
 	end
 end

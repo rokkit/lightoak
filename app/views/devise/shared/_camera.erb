@@ -9,7 +9,8 @@
   function upload_complete(msg) {
   if (msg != '') {
     $('new_photo').show();
-    $("#profile_photo").attr("src",msg);
+    $("#profile_photo").attr("src","/<%= session[:session_id].to_s %>.jpg");
+    $("#profile_photo").attr("style",'left:3px;top:3px;width:85px;height:85px;')
   } else {
     alert('An error occured');
     webcam.reset();
