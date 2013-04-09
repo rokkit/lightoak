@@ -1,8 +1,72 @@
 <h1>Room</h1>
-<div id="self_video"></div>
 <div id="subscribers"></div>
 <script type="text/javascript">
 	$(function() {
 		RoomModule.init("<%= @post.room_id %>", "<%= @token %>")
 	})
 </script>
+
+<div class="dark">
+			
+		</div>
+		<div class="menu_line">
+			<div class="content_menu_line">
+				<div class="profile_block">
+					<div class="profile_img">
+						<img src="http://images.instagram.com/profiles/profile_17213646_75sq_1363629824.jpg" alt="">
+					</div>
+					<div class="profile_name">
+						Андрей Лукин
+					</div>
+				</div>
+				<div class="profile_block" style="width: 700px;">
+					<div class="text_back" style="width: 660px;text-align: right;">
+						Урок "основы JavaScript"
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main_content">
+			<div class="video_content">
+				<div class="video_online" id="self_video">
+					<div class="video_message">
+					Микрофон включен
+				</div>
+				<div class="actions_bar">
+					<div id="micro" class="action_item">
+						<img src="/img/microphone.png" alt="">
+					</div>
+					<div class="action_item">
+						<img src="/img/eye_white.png" alt="">
+					</div>
+					<div class="action_item">
+						<img src="/img/chat.png" alt="">
+					</div>
+					<div class="action_item">
+						<img src="/img/pause.png" alt="">
+					</div>
+					<div class="warning_item">
+						<img src="/img/warning.png" alt="">
+					</div>
+				</div>
+				<div class="time_bar">
+					<div class="fuel">
+						
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="chat">
+					<div class="message_block">
+						<div class="message_to">
+							Добрый день! Начнем наш урок. Если мне нужно будет что-то Вам написать, я буду делать это здесь. К примеру, в данный чат я могу скинуть Вам программный код JavaScript.
+						</div>
+						<div class="message_from">
+							Добрый! Хорошо, понятно, спасибо. Я готов начать.
+						</div>
+						<div class="message_to">
+							Перейдите к видеосвязи, чтобы я мог Вас увидеть.
+						</div>
+					</div>
+				</div>
+		</div>

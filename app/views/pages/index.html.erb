@@ -4,12 +4,12 @@
 
     <div class="menu_line">
       <div class="content_menu_line">
-        <div class="profile_block" onclick="document.location.href = 'profile.html';">
+        <div class="profile_block" onclick="document.location.href = '/pages/profile';">
           <div class="profile_img">
             <%= image_tag current_user.avatar.url(:thumb) %>
           </div>
           <div class="profile_name">
-            <%= link_to "#{current_user.name} #{current_user.last}", controller: :pages, action: :profile %>
+            <%= "#{current_user.name} #{current_user.last}" %>
           </div>
         </div>
         <div class="create_post">

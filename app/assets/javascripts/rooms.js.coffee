@@ -5,8 +5,8 @@
 	session = undefined
 	publisher = undefined
 	subscribers = {}
-	VIDEO_WIDTH = 320
-	VIDEO_HEIGHT = 240
+	VIDEO_WIDTH = 640
+	VIDEO_HEIGHT = 450
 	apiKey = '23302352'
 	connect = (token) ->
 		session.connect apiKey, token
@@ -21,6 +21,10 @@
 	      height: VIDEO_HEIGHT
 	    publisher = TB.initPublisher(apiKey, publisherDiv.id, publisherProps) # Pass the replacement div id and properties
 	    session.publish publisher
+	    $ ->
+			$("#micro").click ->
+				publisher.publishAudio(false)
+				$(".video_message").html("Микрофон выключен")
 	stopPublishing = ->
 	  session.unpublish publisher  if publisher
 	  publisher = null
